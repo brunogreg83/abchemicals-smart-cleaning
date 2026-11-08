@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "starter_catalog_needs_technical_validation",
+  "note": "Nomes e descrições iniciais servem para organizar o catálogo. Não habilitar recomendação automática, diluição ou modo de uso sem validar rótulos, fichas técnicas e compatibilidade.",
+  "products": [
+    {"name":"UMECTRA","known_description":"Detergente umectante","technical_validation":"pending"},
+    {"name":"KALDYNA","known_description":"Detergente alcalino","technical_validation":"pending"},
+    {"name":"ALVION","known_description":"Alvejante à base de cloro","technical_validation":"pending"},
+    {"name":"EQUILIBRA","known_description":"Neutralizante químico","technical_validation":"pending"},
+    {"name":"SOFTELLE","known_description":"Amaciante de roupas","technical_validation":"pending"},
+    {"name":"PROTIVA","known_description":"Removedor de proteínas","technical_validation":"pending"},
+    {"name":"KLEVAR","known_description":"Limpador específico para interior de vasos sanitários","technical_validation":"pending"},
+    {"name":"PRISTEN","known_description":"Limpador para pisos cerâmicos e porcelanatos","technical_validation":"pending"},
+    {"name":"MULTIVA","known_description":"Limpador multiuso","technical_validation":"pending"},
+    {"name":"LUMARE","known_description":"Limpador perfumado","technical_validation":"pending"},
+    {"name":"SOLVEXA","known_description":"Limpador solvente para banheiros","technical_validation":"pending"},
+    {"name":"GRILL","known_description":"Desengordurante para grelhas e chapas","technical_validation":"pending"}
+  ]
+}
