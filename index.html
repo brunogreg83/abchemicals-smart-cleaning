@@ -18,7 +18,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:18px;pa
 </style>
 </head>
 <body><main class="shell">
-<header><div class="brand"><div class="mark">AB</div><div><strong>AB CHEMICALS</strong><span>SMART CLEANING</span></div></div><div class="status">PROTÓTIPO · VERSÃO 0.1</div></header>
+<header><div class="brand"><div class="mark">AB</div><div><strong>AB CHEMICALS</strong><span>SMART CLEANING</span></div></div><div class="status">BETA · ANÁLISE VISUAL EM CONFIGURAÇÃO</div></header>
 <section class="hero"><div class="eyebrow">Diagnóstico visual de limpeza profissional</div><h1>Encontre a solução certa para <em>cada sujidade.</em></h1><p>Envie uma foto, informe a superfície e o ambiente. O assistente organiza os dados para identificar a sujidade e relacioná-la aos produtos do portfólio AB Chemicals.</p></section>
 <section class="authbar" aria-label="Acesso ao aplicativo">
   <div class="field"><label for="authEmail">E-mail de acesso</label><input id="authEmail" type="email" autocomplete="username" placeholder="seu@email.com"></div>
@@ -44,7 +44,20 @@ header{display:flex;align-items:center;justify-content:space-between;gap:18px;pa
 </aside></section>
 <footer>AB CHEMICALS · SMART CLEANING · Ferramenta de apoio à limpeza profissional</footer>
 </main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.95.0"></script>
 <script>
+const SUPABASE_URL="https://zakkdeukaxkwnetuuyzz.supabase.co";
+const SUPABASE_KEY="sb_publishable_T5WwLCX85upSnsWnYve_9w_9ndjLt01";
+const sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
+const authStatus=document.getElementById('authStatus');
+const emailInput=document.getElementById('authEmail');
+const passwordInput=document.getElementById('authPassword');
+function showAuth(message){authStatus.textContent=message}
+async function refreshAuth(){const {data:{session}}=await sb.auth.getSession();showAuth(session?'Acesso ativo: '+session.user.email:'Entre com seu e-mail para liberar análises protegidas.');return session}
+document.getElementById('loginBtn').onclick=async()=>{const {error}=await sb.auth.signInWithPassword({email:emailInput.value.trim(),password:passwordInput.value});showAuth(error?error.message:'Acesso autorizado.');await refreshAuth()};
+document.getElementById('signupBtn').onclick=async()=>{if(passwordInput.value.length<8){showAuth('Use uma senha com pelo menos 8 caracteres.');return}const {data,error}=await sb.auth.signUp({email:emailInput.value.trim(),password:passwordInput.value});showAuth(error?error.message:(data.session?'Cadastro concluído.':'Cadastro iniciado. Confira seu e-mail para confirmar o acesso.'))};
+sb.auth.onAuthStateChange((_event,session)=>showAuth(session?'Acesso ativo: '+session.user.email:'Sessão encerrada.'));
+refreshAuth();
 const photo=document.getElementById('photo'),preview=document.getElementById('preview'),drop=document.getElementById('drop'),analyze=document.getElementById('analyzeBtn'),remove=document.getElementById('removeBtn');
 let imageUrl='';
 function showFile(file){if(!file)return;if(!file.type.startsWith('image/')){alert('Selecione um arquivo de imagem.');return}if(imageUrl)URL.revokeObjectURL(imageUrl);imageUrl=URL.createObjectURL(file);preview.src=imageUrl;drop.classList.add('has-image');remove.classList.remove('hidden');analyze.disabled=false}
