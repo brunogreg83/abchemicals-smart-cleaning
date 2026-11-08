@@ -1,19 +1,223 @@
 {
-  "schema_version": 1,
-  "status": "starter_catalog_needs_technical_validation",
-  "note": "Nomes e descrições iniciais servem para organizar o catálogo. Não habilitar recomendação automática, diluição ou modo de uso sem validar rótulos, fichas técnicas e compatibilidade.",
+  "schema_version": 2,
+  "status": "preliminary_catalog_technical_validation_pending",
+  "note": "Esta base organiza somente as aplicações expressamente conhecidas. Não contém fichas técnicas, FDS, diluições, tempos de contato, compatibilidades nem EPIs específicos validados. Os resultados da IA são candidatos para avaliação técnica, não autorização de uso.",
   "products": [
-    {"name":"UMECTRA","known_description":"Detergente umectante","technical_validation":"pending"},
-    {"name":"KALDYNA","known_description":"Detergente alcalino","technical_validation":"pending"},
-    {"name":"ALVION","known_description":"Alvejante à base de cloro","technical_validation":"pending"},
-    {"name":"EQUILIBRA","known_description":"Neutralizante químico","technical_validation":"pending"},
-    {"name":"SOFTELLE","known_description":"Amaciante de roupas","technical_validation":"pending"},
-    {"name":"PROTIVA","known_description":"Removedor de proteínas","technical_validation":"pending"},
-    {"name":"KLEVAR","known_description":"Limpador específico para interior de vasos sanitários","technical_validation":"pending"},
-    {"name":"PRISTEN","known_description":"Limpador para pisos cerâmicos e porcelanatos","technical_validation":"pending"},
-    {"name":"MULTIVA","known_description":"Limpador multiuso","technical_validation":"pending"},
-    {"name":"LUMARE","known_description":"Limpador perfumado","technical_validation":"pending"},
-    {"name":"SOLVEXA","known_description":"Limpador solvente para banheiros","technical_validation":"pending"},
-    {"name":"GRILL","known_description":"Desengordurante para grelhas e chapas","technical_validation":"pending"}
+    {
+      "name": "UMECTRA",
+      "known_description": "Detergente umectante",
+      "known_application": "Lavanderia profissional; umectação e lavagem de tecidos, conforme processo a validar",
+      "known_soils": [
+        "sujidade geral em tecidos"
+      ],
+      "surfaces": [
+        "tecidos laváveis — confirmar composição e solidez"
+      ],
+      "technical_validation": "pending",
+      "dilution": null,
+      "contact_time": null,
+      "temperature": null,
+      "ppe": null,
+      "restrictions": null,
+      "source_documents": []
+    },
+    {
+      "name": "KALDYNA",
+      "known_description": "Detergente alcalino",
+      "known_application": "Lavanderia profissional; etapa alcalina de lavagem, conforme processo a validar",
+      "known_soils": [
+        "sujidade de lavanderia compatível com detergente alcalino — confirmar"
+      ],
+      "surfaces": [
+        "tecidos laváveis compatíveis — confirmar"
+      ],
+      "technical_validation": "pending",
+      "dilution": null,
+      "contact_time": null,
+      "temperature": null,
+      "ppe": null,
+      "restrictions": null,
+      "source_documents": []
+    },
+    {
+      "name": "ALVION",
+      "known_description": "Alvejante à base de cloro",
+      "known_application": "Lavanderia profissional; alvejamento de tecidos somente quando permitido pelo fabricante do tecido e pela ficha técnica",
+      "known_soils": [
+        "manchas passíveis de alvejamento clorado — confirmar"
+      ],
+      "surfaces": [
+        "somente tecidos comprovadamente compatíveis — confirmar"
+      ],
+      "technical_validation": "pending",
+      "dilution": null,
+      "contact_time": null,
+      "temperature": null,
+      "ppe": null,
+      "restrictions": "Não usar sem confirmar compatibilidade do tecido e restrições do rótulo/FDS. Nunca misturar com ácidos, amônia ou outros produtos.",
+      "source_documents": []
+    },
+    {
+      "name": "EQUILIBRA",
+      "known_description": "Neutralizante de química",
+      "known_application": "Lavanderia profissional; neutralização de resíduos alcalinos após lavagem, conforme processo a validar",
+      "known_soils": [
+        "resíduos alcalinos de processo — confirmar"
+      ],
+      "surfaces": [
+        "tecidos laváveis no processo adequado — confirmar"
+      ],
+      "technical_validation": "pending",
+      "dilution": null,
+      "contact_time": null,
+      "temperature": null,
+      "ppe": null,
+      "restrictions": null,
+      "source_documents": []
+    },
+    {
+      "name": "SOFTELLE",
+      "known_description": "Amaciante de roupas",
+      "known_application": "Lavanderia profissional; etapa de amaciamento de tecidos, conforme processo a validar",
+      "known_soils": [
+        "não é removedor de sujidade; finalidade de amaciamento"
+      ],
+      "surfaces": [
+        "tecidos laváveis compatíveis — confirmar"
+      ],
+      "technical_validation": "pending",
+      "dilution": null,
+      "contact_time": null,
+      "temperature": null,
+      "ppe": null,
+      "restrictions": null,
+      "source_documents": []
+    },
+    {
+      "name": "PROTIVA",
+      "known_description": "Removedor de proteínas",
+      "known_application": "Lavanderia profissional; tratamento de sujidades proteicas em tecidos, conforme processo a validar",
+      "known_soils": [
+        "sujidade de origem proteica em tecidos"
+      ],
+      "surfaces": [
+        "tecidos laváveis compatíveis — confirmar"
+      ],
+      "technical_validation": "pending",
+      "dilution": null,
+      "contact_time": null,
+      "temperature": null,
+      "ppe": null,
+      "restrictions": null,
+      "source_documents": []
+    },
+    {
+      "name": "KLEVAR",
+      "known_description": "Limpador específico para interior de vasos sanitários",
+      "known_application": "Higienização da parte interna de vasos sanitários",
+      "known_soils": [
+        "sujidade aderida no interior de vasos sanitários"
+      ],
+      "surfaces": [
+        "superfície interna de vasos sanitários — confirmar material e compatibilidade"
+      ],
+      "technical_validation": "pending",
+      "dilution": null,
+      "contact_time": null,
+      "temperature": null,
+      "ppe": null,
+      "restrictions": "Não combinar com outros limpadores ou desinfetantes. Confirmar rótulo e FDS antes de uso.",
+      "source_documents": []
+    },
+    {
+      "name": "PRISTEN",
+      "known_description": "Limpador para pisos cerâmicos e porcelanatos",
+      "known_application": "Limpeza de pisos cerâmicos e porcelanatos",
+      "known_soils": [
+        "sujidade de manutenção em pisos cerâmicos e porcelanatos — confirmar"
+      ],
+      "surfaces": [
+        "pisos cerâmicos e porcelanatos; confirmar acabamento, rejunte e restrições"
+      ],
+      "technical_validation": "pending",
+      "dilution": null,
+      "contact_time": null,
+      "temperature": null,
+      "ppe": null,
+      "restrictions": null,
+      "source_documents": []
+    },
+    {
+      "name": "MULTIVA",
+      "known_description": "Limpador multiuso",
+      "known_application": "Limpeza de múltiplas superfícies somente após confirmação de compatibilidade",
+      "known_soils": [
+        "sujidade leve ou de manutenção — confirmar"
+      ],
+      "surfaces": [
+        "não especificadas; validar cada superfície"
+      ],
+      "technical_validation": "pending",
+      "dilution": null,
+      "contact_time": null,
+      "temperature": null,
+      "ppe": null,
+      "restrictions": "A descrição multiuso não significa compatibilidade universal.",
+      "source_documents": []
+    },
+    {
+      "name": "LUMARE",
+      "known_description": "Limpador perfumado",
+      "known_application": "Limpeza perfumada de superfícies conforme indicação do rótulo, ainda não fornecida",
+      "known_soils": [
+        "sujidade de manutenção — confirmar"
+      ],
+      "surfaces": [
+        "não especificadas; validar cada superfície"
+      ],
+      "technical_validation": "pending",
+      "dilution": null,
+      "contact_time": null,
+      "temperature": null,
+      "ppe": null,
+      "restrictions": "Não presumir ação desinfetante ou sanitizante.",
+      "source_documents": []
+    },
+    {
+      "name": "SOLVEXA",
+      "known_description": "Limpador solvente para banheiros",
+      "known_application": "Limpeza de banheiros com formulação solvente; superfícies e aplicação exatas a validar",
+      "known_soils": [
+        "resíduos compatíveis com a formulação — confirmar"
+      ],
+      "surfaces": [
+        "não especificadas; validar cada superfície"
+      ],
+      "technical_validation": "pending",
+      "dilution": null,
+      "contact_time": null,
+      "temperature": null,
+      "ppe": null,
+      "restrictions": "Não presumir compatibilidade com plásticos, acrílicos, pinturas, pedras ou superfícies sensíveis.",
+      "source_documents": []
+    },
+    {
+      "name": "GRILL",
+      "known_description": "Desengordurante para grelhas e chapas",
+      "known_application": "Desengorduramento de grelhas e chapas",
+      "known_soils": [
+        "gordura e resíduos carbonizados em grelhas e chapas — confirmar"
+      ],
+      "surfaces": [
+        "grelhas e chapas compatíveis; confirmar material, revestimento e condição de uso"
+      ],
+      "technical_validation": "pending",
+      "dilution": null,
+      "contact_time": null,
+      "temperature": null,
+      "ppe": null,
+      "restrictions": "Não presumir uso em superfícies aquecidas ou em contato com alimentos sem validação do rótulo/FDS.",
+      "source_documents": []
+    }
   ]
 }
