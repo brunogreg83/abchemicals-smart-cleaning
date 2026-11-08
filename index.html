@@ -38,6 +38,9 @@ header{display:flex;align-items:center;justify-content:space-between;gap:18px;pa
 </aside></section>
 <footer>AB CHEMICALS · SMART CLEANING · Ferramenta de apoio à limpeza profissional</footer>
 </main>
+<script>
+const SUPABASE_URL='https://zakkdeukaxkwnetuuyzz.supabase.co';
+const SUPABASE_KEY='sb_publishable_T5WwLCX85upSnsWnYve_9w_9ndjLt01';
 const photo=document.getElementById('photo'),preview=document.getElementById('preview'),drop=document.getElementById('drop'),analyze=document.getElementById('analyzeBtn'),remove=document.getElementById('removeBtn');
 let imageUrl='';
 function showFile(file){if(!file)return;if(!file.type.startsWith('image/')){alert('Selecione um arquivo de imagem.');return}if(imageUrl)URL.revokeObjectURL(imageUrl);imageUrl=URL.createObjectURL(file);preview.src=imageUrl;drop.classList.add('has-image');remove.classList.remove('hidden');analyze.disabled=false}
